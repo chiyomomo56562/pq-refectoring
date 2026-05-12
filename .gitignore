@@ -1,5 +1,5 @@
 node_modules
-lib
+lib/paramquery-9.1.1
 .nuxt
 license
 package-lock.json
