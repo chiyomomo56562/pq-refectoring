@@ -12,7 +12,7 @@ mockNuxtImport("useRoute", () => {
     meta: { title: "마스터페이지" },
   });
 });
-
+//teststst
 // 런타임에서 유동적으로 주입될 수 있게 상위 스코프 레퍼런스 생성
 const dynamicApiSpy = vi.fn().mockResolvedValue(1);
 
