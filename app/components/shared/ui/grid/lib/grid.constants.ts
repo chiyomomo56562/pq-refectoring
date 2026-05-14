@@ -1,5 +1,5 @@
 import type pq from "pqgrid";
-import { initRightClickMenu } from "./grid.util";
+import { initRightClickMenu } from "./grid.actions";
 
 /**
  * 그리드 생성시 기본으로 세팅할 option

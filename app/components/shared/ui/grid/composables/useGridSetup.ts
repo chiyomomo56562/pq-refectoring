@@ -2,13 +2,9 @@ import { ref, unref, watch, onMounted, isRef, type Ref } from "vue";
 import pq from "pqgrid";
 import dayjs from "dayjs/esm/index.js";
 
-import {
-  initToolbarItems,
-  dateEditor,
-  timeEditor,
-  customSelector,
-  findRender,
-} from "../lib/grid.util";
+import { initToolbarItems } from "../lib/grid.actions";
+import { dateEditor, timeEditor, customSelector } from "../lib/grid.editors";
+import { findRender } from "../lib/grid.util";
 
 import {
   DefaultOptions,
@@ -17,13 +13,16 @@ import {
 
 import {
   editableNewOnly,
-  whenChange,
   checkUniqueOnlyThisColumn,
+  getIsEditing,
+} from "../lib/grid.helpers.data";
+
+import {
+  whenChange,
   resetGridOf,
   changeGridMessageOfnoRow,
   changeHeaderRowCls,
-  getIsEditing,
-} from "../lib/grid.helpers";
+} from "../lib/grid.helpers.dom";
 
 import type {
   ColModel,

@@ -3,8 +3,8 @@ import dayjs from "dayjs/esm/index.js";
 import {
   getIsEditing,
   convertTheChangesToBodyParams,
-  resetGridOf,
-} from "../lib/grid.helpers";
+} from "../lib/grid.helpers.data";
+import { resetGridOf } from "../lib/grid.helpers.dom";
 import { getRowKey } from "../lib/grid.util";
 import type {
   GridBoxSet,

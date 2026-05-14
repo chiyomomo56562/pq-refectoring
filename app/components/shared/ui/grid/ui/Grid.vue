@@ -210,15 +210,9 @@ import "jquery-ui-pack";
 import "pqgrid/localize/pq-localize-kr.js";
 import { ko } from "date-fns/locale";
 
-import {
-  initRightClickMenu,
-  initToolbarItems,
-  dateEditor,
-  timeEditor,
-  getRowKey,
-  customSelector,
-  findRender,
-} from "../lib/grid.util";
+import { initRightClickMenu, initToolbarItems } from "../lib/grid.actions";
+import { dateEditor, timeEditor, customSelector } from "../lib/grid.editors";
+import { getRowKey, findRender } from "../lib/grid.util";
 
 import {
   DefaultOptions,
@@ -229,13 +223,16 @@ import {
 import {
   getIsEditing,
   editableNewOnly,
-  whenChange,
   checkUniqueOnlyThisColumn,
-  resetGridOf,
   convertTheChangesToBodyParams,
+} from "../lib/grid.helpers.data";
+
+import {
+  whenChange,
+  resetGridOf,
   changeGridMessageOfnoRow,
   changeHeaderRowCls,
-} from "../lib/grid.helpers";
+} from "../lib/grid.helpers.dom";
 
 import type {
   SearchList,
